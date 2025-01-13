@@ -17,5 +17,19 @@
             <li><a href="list-siswa.php">Pendaftar</a></li>
         </ul>
     </nav>
+    <?php if(isset($_GET['status'])):?>
+        <p>
+            <?php
+                if($_GET['status'] == 'sukses')
+                {
+                    echo "Pendaftaran Berhasil!";
+                }
+                else
+                {
+                    echo "Pendaftaran Gagal!";
+                }
+            ?>
+        </p>
+    <?php endif?>
 </body>
 </html>
