@@ -33,25 +33,26 @@ include "config.php";
         <tbody>
             <?php
             $query = "SELECT * FROM tbl_siswa";
-            $sql = mysqli_fetch_array($db, $query)
+            $sql = mysqli_query($db, $query);
 
             while($siswa = mysqli_fetch_array($sql))
             {
                 echo "<tr>";
-                echo "<td>" . $siswa[id_user] . "</td>";
-                echo "<td>" . $siswa[nama_siswa] . "</td>";
-                echo "<td>" . $siswa[alamat] . "</td>";
-                echo "<td>" . $siswa[jenis_kelamin] . "</td>";
-                echo "<td>" . $siswa[agama] . "</td>";
-                echo "<td>" . $siswa[asal_sekolah] . "</td>";
-                echo "</tr>";
+                echo "<td>" . $siswa['id_user'] . "</td>";
+                echo "<td>" . $siswa['nama_siswa'] . "</td>";
+                echo "<td>" . $siswa['alamat'] . "</td>";
+                echo "<td>" . $siswa['jenis_kelamin'] . "</td>";
+                echo "<td>" . $siswa['agama'] . "</td>";
+                echo "<td>" . $siswa['asal_sekolah'] . "</td>";
                 
-                echo "<tr>";
-                echo "<a href='form.edit.php?id=>" . $siswa[id_user] . "";
-                echo "</tr>";
+                echo "<td>";
+                echo "<a href='form-edit.php?id=" . $siswa['id_user'] . "' >Edit</a> | ";
+                echo "<a href='hapus.php?id=" . $siswa['id_user'] . "' >Hapus</a>";
+                echo "</td>";
             }
             ?>
         </tbody>
     </table>
+    <p>Total: <?php echo mysqli_num_rows($sql)?></p>
 </body>
 </html>
