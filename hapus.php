@@ -1,9 +1,9 @@
 <?php 
 include("config.php"); 
  
-if(isset($_GET['id']))
+if(isset($_GET['id_siswa']))
 { 
-    $id = $_GET['id']; 
+    $id = $_GET['id_siswa']; 
  
     $sql = "DELETE FROM tbl_siswa WHERE id=$id"; 
     $query = mysqli_query($db, $sql); 
