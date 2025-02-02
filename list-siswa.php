@@ -47,7 +47,7 @@ include "config.php";
                 
                 echo "<td>";
                 echo "<a href='form-edit.php?id=" . $siswa['id_user'] . "' >Edit</a> | ";
-                echo "<a href='hapus.php?id=" . $siswa['id_user'] . "' >Hapus</a>";
+                echo "<a href='hapus.php?id_user=" . $siswa['id_user'] . "' >Hapus</a>";
                 echo "</td>";
             }
             ?>
