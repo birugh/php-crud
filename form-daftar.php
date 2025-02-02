@@ -14,16 +14,29 @@
         <fieldset>
             <label for="nama">Nama:</label>
             <input type="text" name="nama" placeholder="Nama Lengkap" require><br><br>
+
             <label for="alamat">Alamat:</label>
             <textarea name="alamat" id="alamat" placeholder="Alamat Anda"></textarea><br><br>
+
             <label for="jenisKelamin">Jenis Kelamin:</label>
             <select name="jenisKelamin" id="jenisKelamin">
                 <option disabled selected></option>
                 <option value="lakiLaki">Laki - Laki</option>
                 <option value="perempuan">Perempuan</option>
             </select><br><br>
-            <label for="alamat">Asal Sekolah:</label>
-            <input type="text" name="alamat" placeholder="Asal sekolah Anda" require><br><br>
+            
+            <label for="agama">Agama:</label>
+            <select name="agama" id="agama">
+                <option disabled selected></option>
+                <option>Islam</option> 
+                <option>Kristen</option> 
+                <option>Hindu</option=> 
+                <option>Buddha</option=> 
+            </select><br><br>
+
+            <label for="asalSekolah">Asal Sekolah:</label>
+            <input type="text" name="asalSekolah" id="asalSekolah" placeholder="Asal sekolah Anda" require><br><br>
+
             <input type="submit" name="btnSubmit" id="btnSubmit" value="Kirim">
         </fieldset>
     </form>

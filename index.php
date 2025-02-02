@@ -20,11 +20,11 @@
     <?php if(isset($_GET['status'])):?>
         <p>
             <?php
-                if($_GET['status'] == 'sukses')
+                if($_GET['status'] == 'berhasil')
                 {
                     echo "Pendaftaran Berhasil!";
                 }
-                else
+                else if($_GET['status'] == 'gagal')
                 {
                     echo "Pendaftaran Gagal!";
                 }

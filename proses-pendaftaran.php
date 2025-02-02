@@ -5,12 +5,12 @@ if(isset($_POST['btnSubmit']))
 {
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
-    $jenisKelamin = $_POST['jenis_kelamin'];
+    $jenisKelamin = $_POST['jenisKelamin'];
     $agama = $_POST['agama'];
-    $asalSekolah = $_POST['asal_sekolah'];
+    $asalSekolah = $_POST['asalSekolah'];
 
-    $query = "INSERT INTO calon_siswa (nama, alamat, jenis_kelamin, agama, asal_sekolah) 
-            VALUE ('$nama', '$alamat', '$jenisKelamin', '$agama', '$asalSekolah')";
+    $query = "INSERT INTO tbl_siswa (nama_siswa, alamat, jenis_kelamin, agama, asal_sekolah) 
+              VALUE ('$nama', '$alamat', '$jenisKelamin', '$agama', '$asalSekolah')";
     $sql = mysqli_query($db, $query);
 
     if ($sql)
