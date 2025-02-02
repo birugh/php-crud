@@ -5,7 +5,7 @@ if(isset($_GET['id']))
 { 
     $id = $_GET['id']; 
  
-    $sql = "DELETE FROM calon_siswa WHERE id=$id"; 
+    $sql = "DELETE FROM tbl_siswa WHERE id=$id"; 
     $query = mysqli_query($db, $sql); 
  
     if($query)
@@ -14,11 +14,11 @@ if(isset($_GET['id']))
     }
     else
     { 
-        die("gagal menghapus..."); 
+        die("Gagal Menghapus, Silahkan Coba Lagi!"); 
     }  
 } 
 else 
 { 
-    die("akses dilarang..."); 
+    die("Akses dilarang."); 
 } 
 ?>
