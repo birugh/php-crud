@@ -5,7 +5,7 @@ if(isset($_GET['id_siswa']))
 { 
     $id = $_GET['id_siswa']; 
  
-    $sql = "DELETE FROM tbl_siswa WHERE id=$id"; 
+    $sql = "DELETE FROM tbl_siswa WHERE id_siswa=$id"; 
     $query = mysqli_query($db, $sql); 
  
     if($query)
