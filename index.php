@@ -17,9 +17,12 @@
     <?php if (isset($_GET['status'])): ?>
         <p>
             <?php
-            if ($_GET['status'] == 'berhasil') {
+            if ($_GET['status'] == 'berhasil')
+            {
                 echo "Pendaftaran siswa baru berhasil!";
-            } else {
+            }
+            else
+            {
                 echo "Pendaftaran gagal!";
             }
             ?>
