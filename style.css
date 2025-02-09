@@ -27,12 +27,18 @@ header {
 
 .container {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 12px;
     padding: 20px 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.containerTable {
+    width: 100%;
+    max-width: 900px;
     text-align: center;
 }
 
@@ -109,6 +115,41 @@ h3 {
     transition: background-color 0.3s;
 }
 
+.containerIndex {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 12px;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.containerIndex a {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.containerTable a {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
 .container a:hover {
     background-color: #333;
 }
@@ -163,4 +204,44 @@ form button {
 
 form button:hover {
     background-color: #333;
+}
+
+table {
+    width: 100%; /* Perbesar lebar tabel */
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+thead {
+    background-color: #f8f9fa;
+}
+
+thead th {
+    font-size: 14px;
+    color: #6c757d;
+    text-align: left;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+tbody td {
+    font-size: 16px;
+    padding: 15px;
+    text-align: left;
+}
+
+td:last-child {
+    text-align: center;
 }

@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="containerIndex">
         <h3>Pendaftaran Siswa Baru</h3>
         <a href="form-daftar.php">Daftar Baru</a>
         <a href="list-siswa.php">Pendaftar</a>
