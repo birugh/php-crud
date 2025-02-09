@@ -25,6 +25,7 @@ if ($query->num_rows < 1)
 <html> 
 <head> 
     <title>Formulir Edit Siswa | SMK Coding</title> 
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head> 
 <body> 
     <header> 

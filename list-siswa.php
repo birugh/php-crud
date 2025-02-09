@@ -13,6 +13,7 @@ $query = mysqli_query($db, $sql);
 <body>
     <header>
         <h3>Daftar Siswa</h3>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </header>
     <table border="1">
         <thead>

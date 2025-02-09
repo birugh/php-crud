@@ -2,18 +2,14 @@
 <html>
 <head>
     <title>SMK Coding</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
+    <div class="container">
         <h3>Pendaftaran Siswa Baru</h3>
-    </header>
-    <h4>Menu</h4>
-    <nav>
-        <ul>
-            <li><a href="form-daftar.php">Daftar Baru</a></li>
-            <li><a href="list-siswa.php">Pendaftar</a></li>
-        </ul>
-    </nav>
+        <a href="form-daftar.php">Daftar Baru</a>
+        <a href="list-siswa.php">Pendaftar</a>
+    </div>
     <?php if (isset($_GET['status'])): ?>
         <p>
             <?php
