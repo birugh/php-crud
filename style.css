@@ -27,7 +27,7 @@ header {
 
 .container {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 12px;
@@ -115,10 +115,11 @@ h3 {
 
 form {
     background-color: #fff;
-    padding: 30px 40px;
+    padding: 60px 150px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 800px;
+    width: 30%; 
     margin: 0 auto;
 }
 

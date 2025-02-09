@@ -16,12 +16,14 @@
         
         <label for="jenis_kelamin">Jenis Kelamin</label>
         <select name="jenis_kelamin" id="jenis_kelamin" required>
+            <option value="Laki-laki" disabled selected></option>
             <option value="Laki-laki">Laki-laki</option>
             <option value="Perempuan">Perempuan</option>
         </select>
         
         <label for="agama">Agama</label>
         <select name="agama" id="agama" required>
+            <option value="Laki-laki" disabled selected></option>
             <option value="Islam">Islam</option>
             <option value="Kristen">Kristen</option>
             <option value="Hindu">Hindu</option>
