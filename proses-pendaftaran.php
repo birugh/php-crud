@@ -13,7 +13,7 @@ if (isset($_POST['btnSubmit'])) {
         $stmt->bind_param("sssss", $nama, $alamat, $jenisKelamin, $agama, $asalSekolah);
 
         if ($stmt->execute()) {
-            header('Location: index.php?status=berhasil');
+            header('Location: list-siswa.php?status=berhasil');
         } else {
             header('Location: index.php?status=gagal');
         }
