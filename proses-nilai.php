@@ -2,14 +2,14 @@
 include("config.php");
 
 if (isset($_POST['btnSubmit'])) {
-    if (isset($_POST['nisn_user'], $_POST['nilai_mtk'], $_POST['nilai_pjok'], $_POST['nilai_pabp'], $_POST['nilai_web'])) {
-        $nisn = $_POST['nisn_user'];
+    if (isset($_POST['nisn_siswa'], $_POST['nilai_mtk'], $_POST['nilai_pjok'], $_POST['nilai_pabp'], $_POST['nilai_web'])) {
+        $nisn = $_POST['nisn_siswa'];
         $nilai_mtk = $_POST['nilai_mtk'];
         $nilai_pjok = $_POST['nilai_pjok'];
         $nilai_pabp = $_POST['nilai_pabp'];
         $nilai_web = $_POST['nilai_web'];
 
-        $stmt = $db->prepare("INSERT INTO tbl_mapel (nisn, nilai_mtk, nilai_pjok, nilai_pabp, nilai_web) VALUES (?, ?, ?, ?, ?)");
+        $stmt = $db->prepare("INSERT INTO tbl_mapel (nisn_siswa, nilai_mtk, nilai_pjok, nilai_pabp, nilai_web) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("iiiii", $nisn, $nilai_mtk, $nilai_pjok, $nilai_pabp, $nilai_web);
 
         if ($stmt->execute()) {
