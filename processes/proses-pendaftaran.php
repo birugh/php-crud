@@ -1,5 +1,5 @@
 <?php
-include("config.php");
+include("../config/config.php");
 
 if (isset($_POST['btnSubmit'])) {
     if (isset($_POST['nama'], $_POST['alamat'], $_POST['jenis_kelamin'], $_POST['agama'], $_POST['sekolah_asal'])) {
@@ -13,7 +13,7 @@ if (isset($_POST['btnSubmit'])) {
         $stmt->bind_param("sssss", $nama, $alamat, $jenisKelamin, $agama, $asalSekolah);
 
         if ($stmt->execute()) {
-            header('Location: list-siswa.php?status=berhasil');
+            header('Location: ../lists/list-siswa.php?status=berhasil');
         } else {
             header('Location: index.php?status=gagal');
         }

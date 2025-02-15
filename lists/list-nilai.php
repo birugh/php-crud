@@ -1,5 +1,5 @@
 <?php
-include("config.php");
+include("../config/config.php");
 
 $sql = "SELECT tbl_mapel.id_nilai, tbl_mapel.nisn_siswa, tbl_siswa.nama_siswa, tbl_mapel.nilai_mtk, tbl_mapel.nilai_pjok, tbl_mapel.nilai_pabp, tbl_mapel.nilai_web FROM tbl_mapel JOIN tbl_siswa ON tbl_mapel.nisn_siswa = tbl_siswa.nisn_siswa";
 $query = mysqli_query($db, $sql);
@@ -9,7 +9,7 @@ $query = mysqli_query($db, $sql);
 <html>
 <head>
     <title>Daftar Nilai Siswa | SMK Coding</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
     <div class="containerTable">
@@ -38,8 +38,8 @@ $query = mysqli_query($db, $sql);
                         <td><?php echo $nilai['nilai_pabp']; ?></td>
                         <td><?php echo $nilai['nilai_web']; ?></td>
                         <td>
-                            <a href="form-edit-nilai.php?id=<?php echo $nilai['id_nilai']; ?>" class="btn-edit">Edit</a>
-                            <a href="hapus-nilai.php?id_nilai=<?php echo $nilai['id_nilai']; ?>" class="btn-hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                            <a href="../forms/forms-edit/form-edit-nilai.php?id=<?php echo $nilai['id_nilai']; ?>" class="btn-edit">Edit</a>
+                            <a href="../processes/delete/hapus-nilai.php?id_nilai=<?php echo $nilai['id_nilai']; ?>" class="btn-hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
                         </td>
                     </tr>
                 <?php } ?>

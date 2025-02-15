@@ -1,29 +1,29 @@
 <?php 
-include("config.php"); 
+include("../config/config.php"); 
 
-if (isset($_POST['simpan']))
+if (isset($_POST['btnSubmit']))
 { 
-    if (isset($_POST['id_user'], $_POST['nama_siswa'], $_POST['alamat'], $_POST['jenis_kelamin'], $_POST['agama'], $_POST['asal_sekolah']))
+    if (isset($_POST['nisn_siswa'], $_POST['nama_siswa'], $_POST['alamat'], $_POST['jenis_kelamin'], $_POST['agama'], $_POST['asal_sekolah']))
     {
-        $id = $_POST['id_user']; 
+        $id = $_POST['nisn_siswa']; 
         $nama = $_POST['nama_siswa'];
         $alamat = $_POST['alamat']; 
         $jk = $_POST['jenis_kelamin']; 
         $agama = $_POST['agama']; 
         $sekolah = $_POST['asal_sekolah']; 
 
-        $stmt = $db->prepare("UPDATE tbl_siswa SET nama_siswa=?, alamat=?, jenis_kelamin=?, agama=?, asal_sekolah=? WHERE id_user=?");
+        $stmt = $db->prepare("UPDATE tbl_siswa SET nama_siswa=?, alamat=?, jenis_kelamin=?, agama=?, asal_sekolah=? WHERE nisn_siswa=?");
         $stmt->bind_param("sssssi", $nama, $alamat, $jk, $agama, $sekolah, $id);
 
         if ($stmt->execute())
         { 
-            header('Location: list-siswa.php'); 
+            header('Location: ../lists/list-siswa.php'); 
         } 
         else
         { 
             die("Gagal menyimpan perubahan..."); 
         } 
-
+        
         $stmt->close();
     }
     else

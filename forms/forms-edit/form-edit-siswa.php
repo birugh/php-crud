@@ -1,8 +1,8 @@
 <?php
-include("config.php");
+include("../../config/config.php");
 
 if (!isset($_GET['nisn_siswa'])) {
-    header('Location: list-siswa.php');
+    header('Location: ../lists/list-siswa.php');
 }
 
 $nisn_siswa = $_GET['nisn_siswa'];
@@ -20,16 +20,16 @@ if (mysqli_num_rows($query) < 1) {
 <html>
 <head>
     <title>Edit Data Siswa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-    <form action="proses-edit-siswa.php" method="POST">
+    <form action="../../processes/proses-edit-siswa.php" method="POST">
         <h3>Edit Data Siswa</h3>
         
         <input type="hidden" name="nisn_siswa" value="<?php echo $siswa['nisn_siswa']; ?>">
         
         <label for="nama">Nama</label>
-        <input type="text" name="nama" id="nama" value="<?php echo $siswa['nama_siswa']; ?>" required>
+        <input type="text" name="nama_siswa" id="nama" value="<?php echo $siswa['nama_siswa']; ?>" required>
         
         <label for="alamat">Alamat</label>
         <input type="text" name="alamat" id="alamat" value="<?php echo $siswa['alamat']; ?>" required>
@@ -49,8 +49,8 @@ if (mysqli_num_rows($query) < 1) {
             <option value="Lainnya" <?php if ($siswa['agama'] == 'Lainnya') echo 'selected'; ?>>Lainnya</option>
         </select>
         
-        <label for="sekolah_asal">Asal Sekolah</label>
-        <input type="text" name="sekolah_asal" id="sekolah_asal" value="<?php echo $siswa['asal_sekolah']; ?>" required>
+        <label for="asal_sekolah">Asal Sekolah</label>
+        <input type="text" name="asal_sekolah" id="asal_sekolah" value="<?php echo $siswa['asal_sekolah']; ?>" required>
         
         <button type="submit" name="btnSubmit">Update</button>
     </form>

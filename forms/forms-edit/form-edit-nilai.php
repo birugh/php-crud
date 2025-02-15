@@ -1,18 +1,18 @@
 <?php
-include("config.php");
+include("../../config/config.php");
 
 if (!isset($_GET['id'])) {
-    header('Location: list-nilai.php');
+    header('Location: ../../lists/list-nilai.php');
 }
 
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM tbl_mapel WHERE id_nilai = $id";
+$sql = "SELECT * FROM tbl_mapel WHERE id_nilai=$id";
 $query = mysqli_query($db, $sql);
 $nilai = mysqli_fetch_assoc($query);
 
 if (mysqli_num_rows($query) < 1) {
-    die("Data tidak ditemukan...");
+    die("data tidak ditemukan...");
 }
 
 $sql_siswa = "SELECT nisn_siswa, nama_siswa FROM tbl_siswa";
@@ -23,10 +23,10 @@ $query_siswa = mysqli_query($db, $sql_siswa);
 <html>
 <head>
     <title>Edit Nilai Siswa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-    <form action="proses-edit-nilai.php" method="POST">
+    <form action="../../processes/proses-edit-nilai.php" method="POST">
         <h3>Edit Nilai Siswa</h3>
         
         <input type="hidden" name="id_nilai" value="<?php echo $nilai['id_nilai']; ?>">

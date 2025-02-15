@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>Formulir Pendaftaran Siswa Baru</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <form action="proses-pendaftaran.php" method="POST">
+    <form action="../processes/proses-pendaftaran.php" method="POST">
         <h3>Formulir Pendaftaran Siswa Baru</h3>
         
         <label for="nama">Nama</label>
