@@ -179,6 +179,7 @@ form label {
 }
 
 form input[type="text"],
+form input[type="number"],
 form select {
     width: 100%;
     padding: 10px;
@@ -207,7 +208,7 @@ form button:hover {
 }
 
 table {
-    width: 100%; /* Perbesar lebar tabel */
+    width: 100%;
     border-collapse: collapse;
     background-color: #fff;
     border-radius: 12px;
