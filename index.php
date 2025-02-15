@@ -7,8 +7,10 @@
 <body>
     <div class="containerIndex">
         <h3>Pendaftaran Siswa Baru</h3>
-        <a href="form-daftar.php">Daftar Baru</a>
-        <a href="list-siswa.php">Pendaftar</a>
+        <a href="form-daftar.php">Daftar Siswa</a>
+        <a href="list-siswa.php">List Pendaftar</a><br>
+        <a href="form-nilai.php">Input Nilai</a>
+        <a href="list-nilai.php">List Nilai</a>
         <?php if (isset($_GET['status'])): ?>
             <p>
                 <?php
