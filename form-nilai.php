@@ -24,16 +24,16 @@ $query = mysqli_query($db, $sql);
         </select>
         
         <label for="nilai_mtk">Nilai Matematika</label>
-        <input type="text" name="nilai_mtk" id="nilai_mtk" required>
+        <input type="number" name="nilai_mtk" id="nilai_mtk" min="0" max="100" required>
         
         <label for="nilai_pjok">Nilai PJOK</label>
-        <input type="text" name="nilai_pjok" id="nilai_pjok" required>
+        <input type="number" name="nilai_pjok" id="nilai_pjok" min="0" max="100" required>
         
         <label for="nilai_pabp">Nilai PABP</label>
-        <input type="text" name="nilai_pabp" id="nilai_pabp" required>
+        <input type="number" name="nilai_pabp" id="nilai_pabp" min="0" max="100" required>
         
         <label for="nilai_web">Nilai Web</label>
-        <input type="text" name="nilai_web" id="nilai_web" required>
+        <input type="number" name="nilai_web" id="nilai_web" min="0" max="100" required>
         
         <button type="submit" name="btnSubmit">Submit</button>
     </form>
