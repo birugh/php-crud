@@ -9,6 +9,11 @@ if (isset($_POST['btnSubmit'])) {
         $nilai_pabp = $_POST['nilai_pabp'];
         $nilai_web = $_POST['nilai_web'];
 
+        if ($nilai_mtk < 0 || $nilai_mtk > 100 || $nilai_pjok < 0 || $nilai_pjok > 100 || $nilai_pabp < 0 || $nilai_pabp > 100 || $nilai_web < 0 || $nilai_web > 100) {
+            header('Location: form-nilai.php?status=invalid');
+            exit();
+        }
+
         $stmt = $db->prepare("INSERT INTO tbl_mapel (nisn_siswa, nilai_mtk, nilai_pjok, nilai_pabp, nilai_web) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("iiiii", $nisn, $nilai_mtk, $nilai_pjok, $nilai_pabp, $nilai_web);
 
