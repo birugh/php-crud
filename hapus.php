@@ -1,11 +1,11 @@
 <?php
 include("config.php");
 
-if (isset($_GET['id_user']))
+if (isset($_GET['nisn_siswa']))
 {
-    $id = $_GET['id_user'];
+    $id = $_GET['nisn_siswa'];
 
-    $stmt = $db->prepare("DELETE FROM tbl_siswa WHERE id_user = ?");
+    $stmt = $db->prepare("DELETE FROM tbl_siswa WHERE nisn_siswa = ?");
     $stmt->bind_param("i", $id);
 
     if ($stmt->execute())
